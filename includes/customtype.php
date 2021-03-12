@@ -51,30 +51,29 @@ add_action('init', 'create_toolbox_taxonomies' );
 	function create_toolbox_taxonomies() {
 
 		$labels = array(
-			'name'              => 'Layers',
-			'singular_name'     => 'Layer',
-			'search_items'      => 'Search Layers',
-			'all_items'         => 'All Layers',
+			'name'              => 'Categories',
+			'singular_name'     => 'Category',
+			'search_items'      => 'Search Categories',
+			'all_items'         => 'All Categories',
 			'parent_item'       => 'Parent Layer',
 			'parent_item_colon' => 'Parent Layer:',
 			'edit_item'         => 'Edit Layer',
 			'update_item'       => 'Update Layer',
 			'add_new_item'      => 'Add New Layer',
 			'new_item_name'     => 'New Layer Name',
-			'menu_name'         => 'Layers',
+			'menu_name'         => 'Categories',
 		);
 
 		$args = array(
 			'hierarchical'      => true,
 			'labels'            => $labels,
 			'show_ui'           => true,
-			'show_admin_column' => false,
-			'meta_box_cb'	    => false,
+			'show_admin_column' => true,
 			'query_var'         => true,
-			'rewrite'           => array( 'slug' => 'layer' ),
+			'rewrite'           => array( 'slug' => 'contextos_cat' ),
 		);
 
-		register_taxonomy('layers', array('reading'), $args);
+		register_taxonomy('contextos_cat', array('reading'), $args);
 		
 		
 		

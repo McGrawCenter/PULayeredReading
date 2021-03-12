@@ -11,3 +11,6 @@ Note: this added toolbar functionality is only available in the Classic editor a
 
 ## Widget
 This plugin adds a widget, called 'Layers' that adds a menu of available layers to Readings.
+
+## Shortcode
+This plugin also adds one shortcode: [readings-menu] that inserts a list of readings by category.

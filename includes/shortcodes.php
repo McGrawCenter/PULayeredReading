@@ -5,7 +5,7 @@
 function contextos_readings_menu( $atts ){
 
 	$args = array(
-	    'taxonomy' => 'contextos_categories',
+	    'taxonomy' => 'contextos_cat',
 	    'hide_empty' => false,
 	);
 
@@ -24,7 +24,7 @@ function contextos_readings_menu( $atts ){
 		    'post_type'   => 'reading',
 		    'tax_query' => array(
 			array(
-			  'taxonomy' => 'contextos_categories',
+			  'taxonomy' => 'contextos_cat',
 			  'field' => 'term_id', 
 			  'terms' => $term->term_id,
 			  'include_children' => false
@@ -32,15 +32,15 @@ function contextos_readings_menu( $atts ){
 		     )
 		);
 		
-			if($readings = get_posts( $args2 )) {
-			 $html .= "<ul>";
-			 foreach($readings as $reading) {
-			  $permalink = get_permalink($reading->ID);
-			  $thumbnail = get_the_post_thumbnail_url( $reading->ID, 'full' );
-			  $html .= "   <a href='{$permalink}'><li >{$reading->post_title}</li></a>";
-			 }
-			 $html .= "</ul>";
-			}
+		if($readings = get_posts( $args2 )) {
+		 $html .= "<ul>";
+		 foreach($readings as $reading) {
+		  $permalink = get_permalink($reading->ID);
+		  $thumbnail = get_the_post_thumbnail_url( $reading->ID, 'full' );
+		  $html .= " <li><a href='{$permalink}'>{$reading->post_title}</a></li>";
+		 }
+		 $html .= "</ul>";
+		}
 		
 		
 		
