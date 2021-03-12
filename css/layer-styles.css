@@ -1,0 +1,144 @@
+
+/*
+.layer0 { background:rgba(153,102,102,0.7); }
+.layer1 { background:rgba(39,174,96,0.5); }
+.layer2 { background:rgba(25,100,126,0.5); }
+.layer3 { background:rgba(243,156,18,0.5); }; }
+.layer4 { background:rgba(153,0,0,0.7); }
+.layer5 { background:rgba(255,0,0,0.7); }
+.layer6 { background:rgba(255,153,153,0.7); }
+.layer7 { background:rgba(255,204,204,0.7); }
+.layer8 { background:rgba(255,102,51,0.7); }
+.layer9 { background:rgba(153,51,0,0.7); }
+.layer10 { background:rgba(153,102,51,0.7); }
+.layer11 { background:rgba(204,102,0,0.7); }
+.layer12 { background:rgba(255,153,0,0.7); }
+.layer13 { background:rgba(204,153,51,0.7); }
+.layer14 { background:rgba(255,204,102,0.7); }
+.layer15 { background:rgba(255,204,0,0.7); }
+.layer16 { background:rgba(153,153,102,0.7); }
+.layer17 { background:rgba(204,204,153,0.7); }
+.layer18 { background:rgba(204,204,51,0.7); }
+.layer19 { background:rgba(102,102,0,0.7); }
+.layer20 { background:rgba(255,255,51,0.7); }
+.layer21 { background:rgba(255,255,102,0.7); }
+.layer22 { background:rgba(255,255,204,0.7); }
+.layer23 { background:rgba(153,204,0,0.7); }
+.layer24 { background:rgba(204,255,51,0.7); }
+.layer25 { background:rgba(102,153,51,0.7); }
+.layer26 { background:rgba(153,204,102,0.7); }
+.layer27 { background:rgba(51,102,0,0.7); }
+.layer28 { background:rgba(204,255,153,0.7); }
+.layer29 { background:rgba(102,204,51,0.7); }
+.layer30 { background:rgba(51,153,0,0.7); }
+.layer31 { background:rgba(102,255,51,0.7); }
+.layer32 { background:rgba(51,255,0,0.7); }
+.layer33 { background:rgba(153,204,153,0.7); }
+.layer34 { background:rgba(51,204,51,0.7); }
+.layer35 { background:rgba(0,51,0,0.7); }
+.layer36 { background:rgba(0,153,0,0.7); }
+.layer37 { background:rgba(0,204,0,0.7); }
+.layer38 { background:rgba(102,255,102,0.7); }
+.layer39 { background:rgba(153,255,153,0.7); }
+.layer40 { background:rgba(204,255,204,0.7); }
+.layer41 { background:rgba(51,255,102,0.7); }
+.layer42 { background:rgba(0,153,51,0.7); }
+.layer43 { background:rgba(102,204,153,0.7); }
+.layer44 { background:rgba(0,204,102,0.7); }
+.layer45 { background:rgba(51,255,153,0.7); }
+.layer46 { background:rgba(0,255,153,0.7); }
+.layer47 { background:rgba(0,153,102,0.7); }
+.layer48 { background:rgba(51,255,204,0.7); }
+.layer49 { background:rgba(0,255,204,0.7); }
+.layer50 { background:rgba(102,153,153,0.7); }
+.layer51 { background:rgba(153,204,204,0.7); }
+.layer52 { background:rgba(51,204,204,0.7); }
+.layer53 { background:rgba(0,51,51,0.7); }
+.layer54 { background:rgba(0,102,102,0.7); }
+.layer55 { background:rgba(0,255,255,0.7); }
+.layer56 { background:rgba(102,255,255,0.7); }
+.layer57 { background:rgba(0,153,204,0.7); }
+.layer58 { background:rgba(51,204,255,0.7); }
+.layer59 { background:rgba(0,102,153,0.7); }
+.layer60 { background:rgba(0,153,255,0.7); }
+.layer61 { background:rgba(102,153,204,0.7); }
+.layer62 { background:rgba(0,51,102,0.7); }
+.layer63 { background:rgba(153,204,255,0.7); }
+.layer64 { background:rgba(51,102,204,0.7); }
+.layer65 { background:rgba(0,51,153,0.7); }
+.layer66 { background:rgba(102,153,255,0.7); }
+.layer67 { background:rgba(0,51,255,0.7); }
+.layer68 { background:rgba(153,153,204,0.7); }
+.layer69 { background:rgba(51,51,153,0.7); }
+.layer70 { background:rgba(0,0,51,0.7); }
+.layer71 { background:rgba(0,0,153,0.7); }
+.layer72 { background:rgba(102,102,255,0.7); }
+.layer73 { background:rgba(204,204,255,0.7); }
+.layer74 { background:rgba(102,51,255,0.7); }
+.layer75 { background:rgba(102,51,204,0.7); }
+.layer76 { background:rgba(153,102,255,0.7); }
+.layer77 { background:rgba(102,51,153,0.7); }
+.layer78 { background:rgba(51,0,102,0.7); }
+.layer79 { background:rgba(204,153,255,0.7); }
+.layer80 { background:rgba(153,0,255,0.7); }
+.layer81 { background:rgba(204,102,255,0.7); }
+.layer82 { background:rgba(204,51,255,0.7); }
+.layer83 { background:rgba(204,0,255,0.7); }
+.layer84 { background:rgba(204,153,204,0.7); }
+.layer85 { background:rgba(153,51,153,0.7); }
+.layer86 { background:rgba(204,51,204,0.7); }
+.layer87 { background:rgba(51,0,51,0.7); }
+.layer88 { background:rgba(204,0,204,0.7); }
+.layer89 { background:rgba(255,51,255,0.7); }
+.layer90 { background:rgba(255,102,255,0.7); }
+.layer91 { background:rgba(255,153,255,0.7); }
+.layer92 { background:rgba(255,51,204,0.7); }
+.layer93 { background:rgba(153,0,102,0.7); }
+.layer94 { background:rgba(255,0,153,0.7); }
+.layer95 { background:rgba(153,51,102,0.7); }
+.layer96 { background:rgba(255,51,153,0.7); }
+.layer97 { background:rgba(255,153,204,0.7); }
+.layer98 { background:rgba(255,0,102,0.7); }
+.layer99 { background:rgba(255,102,153,0.7); }
+
+
+.layer1 { .layer { background:rgba(39,174,96,0.5); }; }
+.layer2 { .layer { background:rgba(25,100,126,0.5); }; }
+.layer3 { .layer { background:rgba(243,156,18,0.5); }; }
+.layer4 { .layer { background:rgba(0,51,102,0.6); }; }
+.layer5 { .layer { background:rgba(0,0,102,0.6); }; }
+.layer6 { background: rgba(102,0,204,0.6); }; }
+.layer7 { background: rgba(102,0,102,0.6); }; }
+.layer8 { background: rgba(153,51,102,0.6); }; }
+.layer9 { background: rgba(153,51,51,0.6); }; }
+.layer10 { background: rgba(153,51,0,0.6); }; }
+.layer11 { .layer { background:rgba(0,51,153,0.6); }; }
+.layer12 { background: rgba(102,51,0,0.6); }; }
+.layer13 { background: rgba(102,102,51,0.6); }; }
+.layer14 { background: rgba(0,51,0,0.6); }; }
+.layer15 { background: rgba(51,153,102,0.6); }; }
+.layer16 { background: rgba(0,153,204,0.6); }; }
+.layer17 { background: rgba(51,51,204,0.6); }; }
+.layer18 { background: rgba(204,0,153,0.6); }; }
+.layer19 { background: rgba(255,0,0,0.6); }; }
+.layer20 { background: rgba(204,204,0,0.6); }; }
+.layer21 { background: rgba(0,204,0,0.6); }; }
+.layer22 { background: rgba(0,153,255,0.6); }; }
+.layer23 { background: rgba(153,102,255,0.6); }; }
+.layer24 { background: rgba(204,51,153,0.6); }; }
+.layer25 { background: rgba(255,153,51,0.6); }; }
+.layer26 { background: rgba(153,255,51,0.6); }; }
+.layer27 { background: rgba(0,255,153,0.6); }; }
+.layer28 { background: rgba(102,153,255,0.6); }; }
+.layer29 { background: rgba(255,102,102,0.6); }; }
+.layer30 { background: rgba(102,255,102,0.6); }; }
+.layer31 { background: rgba(0,255,255,0.6); }; }
+.layer32 { background: rgba(102,204,255,0.6); }; }
+.layer33 { background: rgba(204,153,255,0.6); }; }
+.layer34 { background: rgba(255,153,204,0.6); }; }
+.layer35 { background: rgba(255,204,153,0.6); }; }
+.layer36 { background: rgba(153,255,153,0.6); }; }
+*/
+
+
+
