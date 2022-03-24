@@ -1,7 +1,7 @@
 
 
 // data we are passing to the editor: layers and posts
-jQuery.get(ajaxurl + '?action=contextos_get_posts', function(data){ 
+jQuery.get(ajaxurl + '?action=pulr_get_posts', function(data){ 
    tinyMCE.activeEditor.settings.myKeyValueList = data;
 });
 			
