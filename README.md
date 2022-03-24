@@ -1,4 +1,4 @@
-# conTEXTos
+# Princeton University Layered Reading
 A Wordpress plugin providing functionality to create a multi-layered reading environment. This plugin allows the author to add thematic highlights to readings. These highlights are associated with posts for further information about the portion that is highlighted. 
 
 Once installed, this plugin adds a custom content type called 'Readings' and associated Tags and Categories taxonomies and a widget allowing users to toggle layers of annotation on and off. 
