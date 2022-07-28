@@ -73,7 +73,7 @@ add_action('init', 'create_toolbox_taxonomies' );
 			'rewrite'           => array( 'slug' => 'reading_cat' ),
 		);
 
-		register_taxonomy('contextos_cat', array('reading'), $args);
+		register_taxonomy('reading_cat', array('reading'), $args);
 		
 		
 		
@@ -104,6 +104,6 @@ add_action('init', 'create_toolbox_taxonomies' );
 			'rewrite'           => array( 'slug' => 'reading_tag' ),
 		);
 
-		register_taxonomy('contextos_tag', array('reading'), $args);	
+		register_taxonomy('reading_tag', array('reading'), $args);	
 	}
 	

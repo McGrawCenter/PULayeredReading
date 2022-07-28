@@ -2,10 +2,10 @@
 
 /**************** shortcodes ***************/
 
-function contextos_readings_menu( $atts ){
+function layered_readings_menu( $atts ){
 
 	$args = array(
-	    'taxonomy' => 'contextos_cat',
+	    'taxonomy' => 'reading_cat',
 	    'hide_empty' => false,
 	);
 
@@ -24,7 +24,7 @@ function contextos_readings_menu( $atts ){
 		    'post_type'   => 'reading',
 		    'tax_query' => array(
 			array(
-			  'taxonomy' => 'contextos_cat',
+			  'taxonomy' => 'reading_cat',
 			  'field' => 'term_id', 
 			  'terms' => $term->term_id,
 			  'include_children' => false
@@ -51,4 +51,4 @@ function contextos_readings_menu( $atts ){
 	$html .= "</ul>";
 	return $html;
 }
-add_shortcode( 'readings-menu', 'contextos_readings_menu' );
+add_shortcode( 'readings-menu', 'layered_readings_menu' );
