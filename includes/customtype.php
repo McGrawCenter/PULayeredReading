@@ -70,7 +70,7 @@ add_action('init', 'create_toolbox_taxonomies' );
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
-			'rewrite'           => array( 'slug' => 'contextos_cat' ),
+			'rewrite'           => array( 'slug' => 'reading_cat' ),
 		);
 
 		register_taxonomy('contextos_cat', array('reading'), $args);
@@ -101,7 +101,7 @@ add_action('init', 'create_toolbox_taxonomies' );
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
-			'rewrite'           => array( 'slug' => 'contextos_tag' ),
+			'rewrite'           => array( 'slug' => 'reading_tag' ),
 		);
 
 		register_taxonomy('contextos_tag', array('reading'), $args);	
