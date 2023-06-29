@@ -28,13 +28,14 @@ class PULR_Widget extends WP_Widget {
 			echo "<ul>";
 
 			if($names = get_option('pulr_layername')) {
-			foreach($names as $name) {
+			  $colors = get_option('pulr_layerhex');
+			  foreach($names as $index=>$name) {
 			    if($name != "") {
 			        $nameslug = strtolower(str_replace(" ","_",$name));
-				echo "<li><a href='#' class='togglelayer' rel='{$nameslug}'>{$name}</a></li>";
+				echo "<li><a href='#' class='togglelayer widget-layer-link' style='background:{$colors[$index]}' rel='{$nameslug}'>{$name}</a></li>";
 			      } 
 			    }
-			}
+			  }
 			
 			echo "</ul>";
 			echo $args['after_widget'];
@@ -47,7 +48,7 @@ class PULR_Widget extends WP_Widget {
 		$title = $instance[ 'title' ];
 		}
 		else {
-		$title = __( 'New title', 'PULR_Widget_domain' );
+		$title = __( 'Layers', 'PULR_Widget_domain' );
 		}
 		// Widget admin form
 		?>

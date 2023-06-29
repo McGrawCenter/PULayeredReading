@@ -2,7 +2,7 @@
 
 /**************** shortcodes ***************/
 
-function layered_readings_menu( $atts ){
+function categorized_layered_readings_menu( $atts ){
 
 	$args = array(
 	    'taxonomy' => 'reading_cat',
@@ -51,4 +51,26 @@ function layered_readings_menu( $atts ){
 	$html .= "</ul>";
 	return $html;
 }
-add_shortcode( 'readings-menu', 'layered_readings_menu' );
+add_shortcode( 'categorized_readings-menu', 'categorized-layered_readings_menu' );
+
+
+function readings_menu( $atts ){
+
+	$args = array(
+	    'numberposts' => -1,
+	    'post_type'   => 'reading'
+	);
+
+	if($readings = get_posts( $args )) {
+	 $html = "<ul>";
+	 foreach($readings as $reading) {
+	  $permalink = get_permalink($reading->ID);
+	  $thumbnail = get_the_post_thumbnail_url( $reading->ID, 'full' );
+	  $html .= " <li><a href='{$permalink}'>{$reading->post_title}</a></li>";
+	 }
+	 $html .= "</ul>";
+	}
+
+	return $html;
+}
+add_shortcode( 'readings-menu', 'readings_menu' );

@@ -35,8 +35,8 @@ add_action('init', 'create_toolbox_taxonomies' );
 	    'menu_position'       => 22,
 	    'menu_icon'           => 'dashicons-admin-appearance',
 	    'capability_type'     => 'post',
-	    'hierarchical'        => true,
-	    'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'page-attributes' ),
+	    'hierarchical'        => false,
+	    'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
 	    'has_archive'         => true,
 	    'rewrite'             => array( 'slug' => 'reading' ),
 	    'query_var'           => true
