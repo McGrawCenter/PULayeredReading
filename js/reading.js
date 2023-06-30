@@ -1,11 +1,24 @@
 
 jQuery( document ).ready(function() {
 
-  jQuery('body').append("<div id='flyout' class='hidden'><div id='flyout-head'><a href='#' class='flyout-close'>&times;</a></div><div id='flyout-content'></div></div>");
+	jQuery('body').append("<div id='flyout'><div id='flyout-head'><a href='#' class='flyout-close'>&times;</a></div><div id='flyout-content'></div></div>");
 
 
+	  /************************
+	  * fixed position layer widget on scroll
+	  ************************/
+	  var widget_location = jQuery(".widget.widget_pulr_widget")[0].offsetTop;
 
-
+	  jQuery(window).scroll(function() {
+	       var widget = jQuery(".widget.widget_pulr_widget");
+	       var hT = widget[0].offsetTop, wS = jQuery(this).scrollTop();
+	       var scroll_pos = (wS+80) - widget_location;
+	       if (scroll_pos > 0){ widget.addClass('fixed-list'); }
+	       else { widget.removeClass('fixed-list'); }
+	  });
+	  
+	  
+	  
 
 	  /************************
 	  * turn on a layer
@@ -56,18 +69,17 @@ jQuery( document ).ready(function() {
 	
 	jQuery(document).on('click','.layer.active',function(e){
 	
+	
 	    var postid = jQuery(this).attr('data-post');
 	    getContextosPost(postid);
-	    
-	    jQuery('#flyout').removeClass();
-	    jQuery('#flyout').addClass('hidden');
-	    
+
 	    var type = jQuery(this).attr('data-type');
 	    jQuery('#flyout').addClass(type);
 	
-	    if(jQuery('#flyout').hasClass('hidden')) {
-	      jQuery('#flyout').switchClass('hidden','shown', 200, "easeInOutQuad");
+	    if(jQuery('#flyout').hasClass('shown')) {
+	      jQuery('#flyout').removeClass("shown");
 	    }
+	    else { jQuery('#flyout').addClass("shown"); }
 	    e.preventDefault();
 	});
 
@@ -82,7 +94,7 @@ jQuery( document ).ready(function() {
 	*****************************/
 	
 	  jQuery(document).on('click','.flyout-close',function(e) {
-	    jQuery('#flyout').switchClass('shown','hidden', 200, "easeInOutQuad");
+	    jQuery('#flyout').removeClass('shown');
 	    e.preventDefault();
 	  });
 	  

@@ -39,6 +39,7 @@ class PULR_Widget extends WP_Widget {
 			
 			echo "</ul>";
 			echo $args['after_widget'];
+			
 		}
 	}
           
