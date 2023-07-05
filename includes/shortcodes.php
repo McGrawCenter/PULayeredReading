@@ -62,7 +62,7 @@ function readings_menu( $atts ){
 	);
 
 	if($readings = get_posts( $args )) {
-	 $html = "<ul>";
+	 $html = "<ul id='layered-readings-menu'>";
 	 foreach($readings as $reading) {
 	  $permalink = get_permalink($reading->ID);
 	  $thumbnail = get_the_post_thumbnail_url( $reading->ID, 'full' );
