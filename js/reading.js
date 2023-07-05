@@ -7,7 +7,7 @@ jQuery( document ).ready(function() {
 	  /************************
 	  * fixed position layer widget on scroll
 	  ************************/
-	  var widget_location = jQuery(".widget.widget_pulr_widget")[0].offsetTop;
+	  var widget_location = jQuery(".widget_pulr_widget").offset().top;
 
 	  jQuery(window).scroll(function() {
 	       var widget = jQuery(".widget.widget_pulr_widget");
@@ -16,7 +16,6 @@ jQuery( document ).ready(function() {
 	       if (scroll_pos > 0){ widget.addClass('fixed-list'); }
 	       else { widget.removeClass('fixed-list'); }
 	  });
-	  
 	  
 	  
 
