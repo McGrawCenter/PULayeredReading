@@ -6,7 +6,7 @@
      text-decoration:none;
 }
 .fixed-list {
-     position:fixed;
+     position:fixed !important;
      top:80px;
 }
 #flyout {
