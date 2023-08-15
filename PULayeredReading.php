@@ -229,7 +229,6 @@ class PULayeredReading {
 	*******************************/
 	function tags_tinymce_fix( $init )
 	{
-	print_r($init);die();
 	  // html elements being stripped
 	  $init['extended_valid_elements'] = 'span[*],span';
 	  // don't remove line breaks
