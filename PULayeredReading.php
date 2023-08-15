@@ -227,22 +227,18 @@ class PULayeredReading {
 	/*******************************
 	* STOP WORDPRESS REMOVING TAGS
 	*******************************/
-	function tags_tinymce_fix( $init )
+	function tags_tinymce_fix( $options )
 	{
-	  // html elements being stripped
-	  $init['extended_valid_elements'] = 'span[*],span';
-	  // don't remove line breaks
-	  //$init['remove_linebreaks'] = false;
-	  // convert newline characters to BR
-	  //$init['convert_newlines_to_brs'] = true;
-	  // don't remove redundant BR
-	  //$init['remove_redundant_brs'] = false;
-	  // pass back to wordpress
-	  return $init;
+	    if ( ! isset( $options['extended_valid_elements'] ) ) {
+		$options['extended_valid_elements'] = 'span[class|data-post|data-type]';
+	    } else {
+		$options['extended_valid_elements'] .= ',span[class|data-post|data-type]';
+	    }
+ 	    return $options;
 	}
 	
 	
-	
+	//<span class="medical layer" data-post="252" data-type="medical">
 	
 
 }   
