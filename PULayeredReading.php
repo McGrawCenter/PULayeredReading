@@ -16,12 +16,17 @@ class PULayeredReading {
 
 
 	  function __construct() {
+	     add_filter('tiny_mce_before_init', array( $this, 'tags_tinymce_fix') );
+	     
+	     
 	     add_action( 'wp_enqueue_scripts', 	array( $this,'pulr_add_scripts') );
 	     add_action( 'admin_enqueue_scripts', 	array ($this,'pulr_admin_add_scripts') );
 	     
 	     add_action('wp_ajax_pulr_get_posts', array($this, 'pulr_ajax_list_posts') );
 	     add_action( 'admin_menu', array( $this, 'add_settings_page') ); 
 	     add_action( 'admin_init', array( $this, 'register_settings') );
+	     
+	     
 	     
 	     // this generates a css page that contains the colors for the layers
 	     add_action( 'init', array( $this, 'generate_css')  );
@@ -216,6 +221,29 @@ class PULayeredReading {
 	    }
 	    return $input;
 	}
+	
+	
+	
+	/*******************************
+	* STOP WORDPRESS REMOVING TAGS
+	*******************************/
+	function tags_tinymce_fix( $init )
+	{
+	print_r($init);die();
+	  // html elements being stripped
+	  $init['extended_valid_elements'] = 'span[*],span';
+	  // don't remove line breaks
+	  //$init['remove_linebreaks'] = false;
+	  // convert newline characters to BR
+	  //$init['convert_newlines_to_brs'] = true;
+	  // don't remove redundant BR
+	  //$init['remove_redundant_brs'] = false;
+	  // pass back to wordpress
+	  return $init;
+	}
+	
+	
+	
 	
 
 }   
