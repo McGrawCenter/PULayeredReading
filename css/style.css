@@ -24,6 +24,7 @@
      right:0%;
      transition:right 1s;
 }
+.flyout-close { color:black;text-decoration:none; }
 
 #flyout-head {
      font-size:2.5em;

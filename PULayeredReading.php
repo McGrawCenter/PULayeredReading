@@ -16,8 +16,9 @@ class PULayeredReading {
 
 
 	  function __construct() {
+	     register_activation_hook( __FILE__, array( $this, 'wpse_add_unfiltered_html') );
 	     add_filter('tiny_mce_before_init', array( $this, 'tags_tinymce_fix') );
-	     
+	     add_filter('wp_kses_allowed_html', array( $this,'tcg_wp_kses_allowed_html'), 11, 2);
 	     
 	     add_action( 'wp_enqueue_scripts', 	array( $this,'pulr_add_scripts') );
 	     add_action( 'admin_enqueue_scripts', 	array ($this,'pulr_admin_add_scripts') );
@@ -229,6 +230,8 @@ class PULayeredReading {
 	*******************************/
 	function tags_tinymce_fix( $options )
 	{
+	
+	    $role = get_role('administrator');
 	    if ( ! isset( $options['extended_valid_elements'] ) ) {
 		$options['extended_valid_elements'] = 'span[class|data-post|data-type]';
 	    } else {
@@ -238,7 +241,27 @@ class PULayeredReading {
 	}
 	
 	
-	//<span class="medical layer" data-post="252" data-type="medical">
+
+	function wpse_add_unfiltered_html() {
+	
+	    // Get whichever role you want to affect
+	    $role = get_role('administrator');
+
+	    // Give editors "unfiltered_html" capability
+	    $role->add_cap('unfiltered_html');
+	}
+	
+	//<span class="medical layer" data-post="252" data-type="medical">TESTING</span> 
+	
+	function tcg_wp_kses_allowed_html($tags, $context) {
+	      $tags['span']           = array();
+	      $tags['span']['class']  = true;
+	      $tags['span']['data-post']  = true;
+	      $tags['span']['data-type']  = true;
+	      return $tags;
+	}
+
+		
 	
 
 }   
