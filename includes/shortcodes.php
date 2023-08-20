@@ -60,15 +60,20 @@ function readings_menu( $atts ){
 	    'numberposts' => -1,
 	    'post_type'   => 'reading'
 	);
+	
+	if(isset($atts['title'])) { $title = $atts['title']; }
+	else { $title = "Readings" }
 
 	if($readings = get_posts( $args )) {
-	 $html = "<ul id='layered-readings-menu'>";
+	 $html = "<div class='readings-menu'>"
+	 if($title != "") { $html .= "<h3>{$title}</h3>"; }
+	 $html .= "<ul id='layered-readings-menu'>";
 	 foreach($readings as $reading) {
 	  $permalink = get_permalink($reading->ID);
 	  $thumbnail = get_the_post_thumbnail_url( $reading->ID, 'full' );
 	  $html .= " <li><a href='{$permalink}'>{$reading->post_title}</a></li>";
 	 }
-	 $html .= "</ul>";
+	 $html .= "</ul></div>";
 	}
 
 	return $html;
