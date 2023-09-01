@@ -93,7 +93,8 @@ jQuery( document ).ready(function() {
 	*****************************/
 	
 	  jQuery(document).on('click','.flyout-close',function(e) {
-	    jQuery('#flyout').removeClass('shown');
+	    jQuery('#flyout').removeClass();
+	    //jQuery('#flyout').removeClass('shown');
 	    e.preventDefault();
 	  });
 	  
