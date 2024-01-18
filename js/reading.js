@@ -7,7 +7,8 @@ jQuery( document ).ready(function() {
 	  /************************
 	  * fixed position layer widget on scroll
 	  ************************/
-	  if(jQuery(".widget_pulr_widget")) {
+	  console.log(jQuery(".widget_pulr_widget").length );
+	  if(jQuery(".widget_pulr_widget").length > 0) {
 	     var widget_location = jQuery(".widget_pulr_widget").offset().top;
 	  }
 
