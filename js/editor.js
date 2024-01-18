@@ -10,7 +10,7 @@ jQuery.get(ajaxurl + '?action=pulr_get_posts', function(data){
 
 (function() {
 
-    tinymce.PluginManager.add('linguaviva_tc_button', function( editor, url ) {
+    tinymce.PluginManager.add('layeredreading_tc_button', function( editor, url ) {
 
 	function getValues(part) {
 	   if(part=='layers') { return editor.settings.myKeyValueList.layers;  }
@@ -20,8 +20,8 @@ jQuery.get(ajaxurl + '?action=pulr_get_posts', function(data){
 
  
         editor.addButton( 'highlighter', {
-            text: 'Highlighter',
-	    tooltip : 'Insert highlight',
+            text: 'Add Layer',
+	    tooltip : 'Add Layer',
             icon: false,
             onclick: function() {
             
