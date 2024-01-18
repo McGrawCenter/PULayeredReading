@@ -5,7 +5,7 @@
 /************************** ADD BUTTON TO TINYMCE *******************************/
 
 
-class EatMe {
+class LayeredReadingEditorButtons {
 
 // https://www.gavick.com/blog/wordpress-tinymce-custom-buttons
 
@@ -45,4 +45,4 @@ class EatMe {
 
 }
 
-new EatMe();
+new LayeredReadingEditorButtons();
